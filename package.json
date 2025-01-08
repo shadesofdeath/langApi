@@ -1,14 +1,11 @@
 {
-    "name": "windows-version-api",
-    "version": "1.0.0",
-    "private": true,
-    "scripts": {
-      "start": "node src/server.js",
-      "fetch": "node src/fetch.js"
-    },
-    "dependencies": {
-      "axios": "^1.6.2",
-      "express": "^4.18.2",
-      "node-cache": "^5.1.2"
-    }
+  "name": "windows-version-api",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "fetch": "node src/scripts/fetchData.js"
+  },
+  "dependencies": {
+    "node-fetch": "^2.7.0"
   }
+}
