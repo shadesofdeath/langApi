@@ -1,8 +1,9 @@
 name: Fetch and Update UUP Data
 
 on:
+  workflow_dispatch:  # Manuel tetikleme için
   schedule:
-    - cron: '0 */2 * * *'  # Her 2 saatte bir çalışır
+    - cron: '0 */2 * * *'  # Her 2 saatte bir otomatik çalışma
 
 jobs:
   fetch_data:
