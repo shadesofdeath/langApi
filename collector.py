@@ -9,7 +9,24 @@ import random
 UUP_VERSIONS = [
     {"id": "ad27e52b-9e18-408a-9df2-8688e5273fbf", "version": "W11 24H2", "arch": "x64", "is_win11": True},
     {"id": "b6049aaf-4f56-4183-8e58-32954906de64", "version": "W11 24H2", "arch": "arm64", "is_win11": True},
-    # Diğer sürümler...
+    {"id": "30da46b4-2ff2-4682-a9ae-23b66dd98713", "version": "W11 Server version 24H2", "arch": "x64", "is_win11": True},
+    {"id": "fb12fdae-dd42-4d2d-b8cc-380a968e8d10", "version": "W11 Server version 24H2", "arch": "arm64", "is_win11": True},
+    {"id": "ebf14a71-0f6e-4958-9bf4-27c746050640", "version": "W11 Server version 23H2", "arch": "x64", "is_win11": True},
+    {"id": "9310ebcc-79ee-40aa-ae4a-4da849dd4684", "version": "W10 Server version 22H2", "arch": "x64", "is_win11": False},
+    {"id": "2ba1d737-a36b-415b-a630-85bd5146d77d", "version": "W10 Server version 21H2", "arch": "x64", "is_win11": False},
+    {"id": "0c36c0e6-8397-424d-b460-26cc0d044c7f", "version": "W11 22H2 & 23H2", "arch": "x64", "is_win11": True},
+    {"id": "a2b2e765-4612-44d8-9fb0-b11b699aaf4b", "version": "W11 22H2 & 23H2", "arch": "arm64", "is_win11": True},
+    {"id": "35630b7b-4509-45b6-83a1-d4c75d5aa9b6", "version": "W11 21H2", "arch": "x64", "is_win11": True},
+    {"id": "fba7e852-3fcc-4dad-8561-42c455cfffd7", "version": "W11 21H2", "arch": "arm64", "is_win11": True},
+    {"id": "e1885854-aea0-453d-9e64-bfd00535a925", "version": "W10 22H2", "arch": "x64", "is_win11": False},
+    {"id": "21dec2dc-8213-4021-a31c-7dd07e034dd5", "version": "W10 22H2", "arch": "x86", "is_win11": False},
+    {"id": "d1aaf6a7-c80b-49bb-8d79-99b6a3cfb5c1", "version": "W10 22H2", "arch": "arm64", "is_win11": False},
+    {"id": "3ead9b43-aa9d-4973-8195-24be0b0ce1e1", "version": "W10 2004, 20H2, 21H1, 21H2", "arch": "x64", "is_win11": False},
+    {"id": "70f4293c-6eaa-4db5-b059-9755ab5628d8", "version": "W10 2004, 20H2, 21H1, 21H2", "arch": "x86", "is_win11": False},
+    {"id": "bb720c43-af68-4dc6-a397-42f278183314", "version": "W10 2004, 20H2, 21H1, 21H2", "arch": "arm64", "is_win11": False},
+    {"id": "9005d4cd-fce9-466b-b98e-a67414acebd8", "version": "W10 1809", "arch": "x64", "is_win11": False},
+    {"id": "dcb2f7dd-8822-444b-802f-d417e19474a9", "version": "W10 1809", "arch": "x86", "is_win11": False},
+    {"id": "5a143235-5474-4cfa-9078-65e434d9df67", "version": "W10 1809", "arch": "arm64", "is_win11": False}
 ]
 
 SERVER_FOD_KEYWORDS = [
@@ -148,31 +165,24 @@ CAB_FILTER_PATTERNS = [
     r'Microsoft-Windows-LanguageFeatures-Speech-.*-Package-amd64_.*\.cab'
 ]
 
-EXCLUDED_FILENAMES = [
-    'core_', 'professional_', 'coren_', 'professionaln_',
-    'PPIPro_', 'ServerDatacenter_', 'ServerStandard_',
-    'ServerTurbine_'
-]
-
 def is_server_fod(filename, lang):
-    """Belirtilen dosyanın Server FOD içerip içermediğini kontrol eder."""
     lang = lang.rstrip('-')
     return any(keyword in filename and filename.endswith(f'{lang}.cab') for keyword in SERVER_FOD_KEYWORDS)
 
 def filter_language_files(files, lang):
-    """Dil dosyalarını filtreler."""
     filtered_files = {}
     for filename, file_data in files.items():
-        # ESD veya CAB uzantılı dosyaları ve dil kodunu kontrol et
         if not ((filename.endswith(('.esd', '.cab')) and lang in filename) or
                 filename.endswith('LanguageExperiencePack_.appx')):
             continue
             
-        # Hariç tutulacak belirli dosyaları filtrele
-        if any(excluded in filename for excluded in EXCLUDED_FILENAMES):
+        if any(x in filename for x in [
+            'core_', 'professional_', 'coren_', 'professionaln_',
+            'PPIPro_', 'ServerDatacenter_', 'ServerStandard_',
+            'ServerTurbine_'
+        ]):
             continue
 
-        # CAB dosyalarını belirli desenlere göre filtrele
         if any(re.match(pattern, filename) for pattern in CAB_FILTER_PATTERNS):
             continue
 
@@ -181,7 +191,6 @@ def filter_language_files(files, lang):
     return filtered_files
 
 def get_language_files(version_info, lang='tr-tr'):
-    """Belirtilen sürüm bilgisine göre dil dosyalarını getirir."""
     base_url = "https://api.uupdump.net/get.php"
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
@@ -210,7 +219,6 @@ def get_language_files(version_info, lang='tr-tr'):
         return None
 
 def save_version_data(version_info, lang_files, lang='tr-tr'):
-    """Dil dosyalarını JSON formatında kaydeder."""
     if not lang_files:
         print(f"No files to save for {version_info['version']}")
         return
@@ -237,7 +245,6 @@ def save_version_data(version_info, lang_files, lang='tr-tr'):
     print(f"✓ Saved {version_info['version']} ({version_info['arch']})")
 
 def collect_language_files():
-    """Dil dosyalarını toplar ve kaydeder."""
     print("Starting language files collection...")
     
     for version in UUP_VERSIONS:
