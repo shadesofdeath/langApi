@@ -3,6 +3,7 @@ import os
 import requests
 from datetime import datetime, UTC
 import time
+import random
 
 UUP_VERSIONS = [
     {
@@ -17,14 +18,6 @@ UUP_VERSIONS = [
         "arch": "arm64",
         "is_win11": True
     }
-]
-
-LANGUAGES = [
-    "ar-sa", "bg-bg", "cs-cz", "da-dk", "de-de", "el-gr", "en-gb", "en-us",
-    "es-es", "es-mx", "et-ee", "fi-fi", "fr-ca", "fr-fr", "he-il", "hr-hr",
-    "hu-hu", "it-it", "ja-jp", "ko-kr", "lt-lt", "lv-lv", "nb-no", "nl-nl",
-    "pl-pl", "pt-br", "pt-pt", "ro-ro", "ru-ru", "sk-sk", "sl-si", "sr-latn-rs",
-    "sv-se", "th-th", "tr-tr", "uk-ua", "zh-cn", "zh-tw"
 ]
 
 def filter_language_files(files, lang):
@@ -48,52 +41,63 @@ def filter_language_files(files, lang):
 
 def collect_language_files():
     base_url = "https://api.uupdump.net/get.php"
-    headers = {'User-Agent': 'LangAPI/1.0'}
-
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+        'Accept': 'application/json',
+        'Accept-Language': 'tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7'
+    }
+    
     for version in UUP_VERSIONS:
-        for lang in LANGUAGES:
+        try:
+            # Random bekleme süresi (10-15 saniye arası)
+            sleep_time = random.uniform(10, 15)
+            time.sleep(sleep_time)
+            
+            params = {
+                'id': version['id'],
+                'lang': 'tr-tr',
+                'edition': 'core'
+            }
+            
+            response = requests.get(
+                base_url, 
+                params=params, 
+                headers=headers,
+                timeout=30
+            )
+            
+            if response.status_code != 200:
+                print(f"Error {response.status_code} for {version['version']}")
+                continue
+            
             try:
-                params = {
-                    'id': version['id'],
-                    'lang': lang,
-                    'edition': 'core'
-                }
+                data = response.json()
+            except json.JSONDecodeError:
+                print(f"Invalid JSON for {version['version']}")
+                continue
+            
+            if 'response' not in data or 'files' not in data['response']:
+                continue
+            
+            lang_files = filter_language_files(data['response']['files'], 'tr-tr')
+            
+            output = {
+                'version': version['version'],
+                'arch': version['arch'],
+                'language': 'tr-tr',
+                'timestamp': datetime.now(UTC).isoformat(),
+                'files': lang_files
+            }
+            
+            os_type = 'windows11' if version['is_win11'] else 'windows10'
+            save_dir = f'data/{os_type}/{version["arch"]}/tr-tr'
+            os.makedirs(save_dir, exist_ok=True)
+            
+            with open(f'{save_dir}/files.json', 'w', encoding='utf-8') as f:
+                json.dump(output, f, indent=2, ensure_ascii=False)
                 
-                response = requests.get(base_url, params=params, headers=headers)
-                time.sleep(1)  # API rate limiting
-                
-                if response.status_code != 200:
-                    print(f"Error {response.status_code} for {version['version']} {lang}")
-                    continue
-                
-                try:
-                    data = response.json()
-                except json.JSONDecodeError:
-                    print(f"Invalid JSON for {version['version']} {lang}")
-                    continue
-                
-                if 'response' not in data or 'files' not in data['response']:
-                    continue
-                
-                lang_files = filter_language_files(data['response']['files'], lang)
-                
-                output = {
-                    'version': version['version'],
-                    'arch': version['arch'],
-                    'language': lang,
-                    'timestamp': datetime.now(UTC).isoformat(),
-                    'files': lang_files
-                }
-                
-                os_type = 'windows11' if version['is_win11'] else 'windows10'
-                save_dir = f'data/{os_type}/{version["arch"]}/{lang}'
-                os.makedirs(save_dir, exist_ok=True)
-                
-                with open(f'{save_dir}/files.json', 'w', encoding='utf-8') as f:
-                    json.dump(output, f, indent=2, ensure_ascii=False)
-                    
-            except Exception as e:
-                print(f"Error processing {version['version']} {lang}: {str(e)}")
+        except Exception as e:
+            print(f"Error processing {version['version']}: {str(e)}")
 
 if __name__ == "__main__":
     collect_language_files()
