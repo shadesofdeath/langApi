@@ -1,0 +1,32 @@
+{
+    "W11 24H2": {
+      "updateId": "ad27e52b-9e18-408a-9df2-8688e5273fbf",
+      "arch": "x64",
+      "isWin11": true,
+      "files": {}
+    },
+    "W11 24H2 ARM64": {
+      "updateId": "b6049aaf-4f56-4183-8e58-32954906de64",
+      "arch": "arm64",
+      "isWin11": true,
+      "files": {}
+    },
+    "W11 Server version 24H2": {
+      "updateId": "30da46b4-2ff2-4682-a9ae-23b66dd98713",
+      "arch": "x64",
+      "isWin11": true,
+      "files": {}
+    },
+    "W11 22H2 & 23H2": {
+      "updateId": "0c36c0e6-8397-424d-b460-26cc0d044c7f",
+      "arch": "x64",
+      "isWin11": true,
+      "files": {}
+    },
+    "W10 22H2": {
+      "updateId": "e1885854-aea0-453d-9e64-bfd00535a925",
+      "arch": "x64",
+      "isWin11": false,
+      "files": {}
+    }
+  }
