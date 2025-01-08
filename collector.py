@@ -1,9 +1,9 @@
 import json
 import os
 import requests
-from datetime import datetime
+from datetime import datetime, UTC
+import time
 
-# UUP versiyon ve dil bilgileri
 UUP_VERSIONS = [
     {
         "id": "ad27e52b-9e18-408a-9df2-8688e5273fbf",
@@ -17,7 +17,6 @@ UUP_VERSIONS = [
         "arch": "arm64",
         "is_win11": True
     }
-    # Diğer versiyonları da ekleyebilirsiniz
 ]
 
 LANGUAGES = [
@@ -29,70 +28,67 @@ LANGUAGES = [
 ]
 
 def filter_language_files(files, lang):
-    """PowerShell'deki filtreleme mantığına benzer şekilde dil dosyalarını filtrele"""
     filtered_files = {}
-    
     for filename, file_data in files.items():
-        # Sadece .cab, .esd ve .appx dosyalarını al
         if not (filename.endswith(('.cab', '.esd')) and lang in filename) and \
            not filename.endswith('LanguageExperiencePack_.appx'):
             continue
-            
-        # Belirli ESD dosyalarını hariç tut
         if any(x in filename for x in ['core_', 'professional_', 'coren_', 
                'professionaln_', 'PPIPro_', 'ServerDatacenter_', 
                'ServerStandard_', 'ServerTurbine_']):
             continue
-            
-        # Server FOD dosyalarını hariç tut
         if any(x in filename for x in [
             'Microsoft-Windows-LanguageFeatures-Basic',
             'Microsoft-Windows-LanguageFeatures-OCR',
             'Microsoft-Windows-LanguageFeatures-TextToSpeech'
-            # Diğer FOD keywordleri eklenebilir
         ]):
             continue
-            
         filtered_files[filename] = file_data
-    
     return filtered_files
 
 def collect_language_files():
     base_url = "https://api.uupdump.net/get.php"
-    
+    headers = {'User-Agent': 'LangAPI/1.0'}
+
     for version in UUP_VERSIONS:
         for lang in LANGUAGES:
             try:
-                # API'den veri çek
                 params = {
                     'id': version['id'],
                     'lang': lang,
                     'edition': 'core'
                 }
-                response = requests.get(base_url, params=params)
-                data = response.json()
+                
+                response = requests.get(base_url, params=params, headers=headers)
+                time.sleep(1)  # API rate limiting
+                
+                if response.status_code != 200:
+                    print(f"Error {response.status_code} for {version['version']} {lang}")
+                    continue
+                
+                try:
+                    data = response.json()
+                except json.JSONDecodeError:
+                    print(f"Invalid JSON for {version['version']} {lang}")
+                    continue
                 
                 if 'response' not in data or 'files' not in data['response']:
                     continue
                 
-                # Dil dosyalarını filtrele
                 lang_files = filter_language_files(data['response']['files'], lang)
                 
-                # Sonuçları kaydet
                 output = {
                     'version': version['version'],
                     'arch': version['arch'],
                     'language': lang,
-                    'timestamp': datetime.utcnow().isoformat(),
+                    'timestamp': datetime.now(UTC).isoformat(),
                     'files': lang_files
                 }
                 
-                # Dizin yapısı oluştur
                 os_type = 'windows11' if version['is_win11'] else 'windows10'
                 save_dir = f'data/{os_type}/{version["arch"]}/{lang}'
                 os.makedirs(save_dir, exist_ok=True)
                 
-                # JSON dosyasını kaydet
                 with open(f'{save_dir}/files.json', 'w', encoding='utf-8') as f:
                     json.dump(output, f, indent=2, ensure_ascii=False)
                     
