@@ -1,0 +1,17 @@
+{
+  "version": "W11 24H2",
+  "arch": "x64",
+  "language": "tr-tr",
+  "timestamp": "2025-01-08T17:25:00.398505+00:00",
+  "files": {
+    "Microsoft-Windows-LanguageFeatures-Handwriting-tr-tr-Package-amd64.cab": {
+      "sha1": "bc482bc254ea1f7deabe8a4e7624a5f387013d32",
+      "sha256": "8e58225c7cedc843dc94f156acf53696971257e5f915943d0e1955c5e3d68812",
+      "size": "5290579",
+      "url": "http://tlu.dl.delivery.mp.microsoft.com/filestreamingservice/files/63d9f3ee-3185-4606-8d3d-78c29421048c?P1=1736357731&P2=404&P3=2&P4=MPnmfMslW8NOayDugiYsSW46h49Kn6JQINZ00PXe16xucQ4U2O0csuLbDhlwvZzpbo0jy4oxRnhOUpeOaeBIgQ%3d%3d",
+      "uuid": "63d9f3ee-3185-4606-8d3d-78c29421048c",
+      "expire": 1736357731,
+      "debug": "<FileLocation><FileDigest>vEgrwlTqH33qvopOdiSl84cBPTI=</FileDigest><Url>http://tlu.dl.delivery.mp.microsoft.com/filestreamingservice/files/63d9f3ee-3185-4606-8d3d-78c29421048c?P1=1736357731&amp;P2=404&amp;P3=2&amp;P4=MPnmfMslW8NOayDugiYsSW46h49Kn6JQINZ00PXe16xucQ4U2O0csuLbDhlwvZzpbo0jy4oxRnhOUpeOaeBIgQ%3d%3d</Url></FileLocation>"
+    }
+  }
+}
