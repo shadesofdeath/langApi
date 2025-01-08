@@ -1,6 +1,9 @@
-const fetch = require('node-fetch');
-const fs = require('fs').promises;
-const path = require('path');
+import fetch from 'node-fetch';
+import { promises as fs } from 'fs';
+import { dirname } from 'path';
+import { fileURLToPath } from 'url';
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const UUP_TABLE = [
   {
@@ -92,9 +95,11 @@ async function main() {
   }
 
   // Save data
-  await fs.mkdir('./data', { recursive: true });
+  const dataDir = new URL('../../data', import.meta.url);
+  await fs.mkdir(dataDir, { recursive: true });
+  
   await fs.writeFile(
-    './data/windows-versions.json',
+    new URL('windows-versions.json', dataDir),
     JSON.stringify(data, null, 2)
   );
   
@@ -125,7 +130,10 @@ async function main() {
 </body>
 </html>`;
 
-  await fs.writeFile('./data/index.html', html);
+  await fs.writeFile(
+    new URL('index.html', dataDir),
+    html
+  );
 }
 
 main().catch(console.error);
