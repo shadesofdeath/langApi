@@ -1,0 +1,35 @@
+{
+  "version": "W11 24H2",
+  "arch": "x64",
+  "language": "en-us",
+  "timestamp": "2025-01-08T17:13:40.491242+00:00",
+  "files": {
+    "Microsoft-Windows-Client-LanguagePack-Package-amd64-en-us.esd": {
+      "sha1": "29cd661e07e0fc670590577f8b51e982a6f3e77b",
+      "sha256": "d97823fa02943bdb16657b27b3b524a6ef180a6e22bc02c251a3f4e51916aa3d",
+      "size": "19463948",
+      "url": "http://tlu.dl.delivery.mp.microsoft.com/filestreamingservice/files/de43f675-ca63-4f1f-be6f-641489ae2119?P1=1736357319&P2=404&P3=2&P4=h9YAIs7Suq7ojXEQCGdPCBq2ZY5S8J30BNxhRXln4%2bL25JSijiMsiPo0At6Tdx8uAvAKvAUYsdE2dZqMFJgweQ%3d%3d",
+      "uuid": "de43f675-ca63-4f1f-be6f-641489ae2119",
+      "expire": 1736357319,
+      "debug": "<FileLocation><FileDigest>Kc1mHgfg/GcFkFd/i1Hpgqbz53s=</FileDigest><Url>http://tlu.dl.delivery.mp.microsoft.com/filestreamingservice/files/de43f675-ca63-4f1f-be6f-641489ae2119?P1=1736357319&amp;P2=404&amp;P3=2&amp;P4=h9YAIs7Suq7ojXEQCGdPCBq2ZY5S8J30BNxhRXln4%2bL25JSijiMsiPo0At6Tdx8uAvAKvAUYsdE2dZqMFJgweQ%3d%3d</Url></FileLocation>"
+    },
+    "Microsoft-Windows-LanguageFeatures-Handwriting-en-us-Package-amd64.cab": {
+      "sha1": "aa7f92c061a2117d0a240030b70a71d73729af63",
+      "sha256": "0d0358f9e4e8db45c004eeab052746d3a4db147f048ac4d98e1877866e3768c8",
+      "size": "12582903",
+      "url": "http://tlu.dl.delivery.mp.microsoft.com/filestreamingservice/files/f2b0dde8-a9f9-4653-82a1-ff0995fcba5f?P1=1736357135&P2=404&P3=2&P4=Jba7Jh1f3eW2NvE8IBhika%2bJCVOgn3LK6hXBbVw3nyq4sIIgL%2bNr4jyxwrI1d7SFaq1tXYGlAtvkpqvrwDaAvw%3d%3d",
+      "uuid": "f2b0dde8-a9f9-4653-82a1-ff0995fcba5f",
+      "expire": 1736357135,
+      "debug": "<FileLocation><FileDigest>qn+SwGGiEX0KJAAwtwpx1zcpr2M=</FileDigest><Url>http://tlu.dl.delivery.mp.microsoft.com/filestreamingservice/files/f2b0dde8-a9f9-4653-82a1-ff0995fcba5f?P1=1736357135&amp;P2=404&amp;P3=2&amp;P4=Jba7Jh1f3eW2NvE8IBhika%2bJCVOgn3LK6hXBbVw3nyq4sIIgL%2bNr4jyxwrI1d7SFaq1tXYGlAtvkpqvrwDaAvw%3d%3d</Url></FileLocation>"
+    },
+    "Microsoft-Windows-LanguageFeatures-Speech-en-us-Package-amd64.cab": {
+      "sha1": "11524fd75511396f81a33ff251f446ee2e9720ea",
+      "sha256": "71c4f62c5f5417025224bd390eaa9d5df6779c3136a55c128c20ac0a8e61fc70",
+      "size": "64398391",
+      "url": "http://tlu.dl.delivery.mp.microsoft.com/filestreamingservice/files/fac4041f-dea4-43e6-8fc5-97934ecf5300?P1=1736358141&P2=404&P3=2&P4=fwRsi%2ftU2qJGhNlUMfFAtovAf94zmq9ASiXHjy%2fr2EKIY6S4nhXLF5G68iTCvfQkSOY1kn8C%2bAYq%2fv1TG3CbzQ%3d%3d",
+      "uuid": "fac4041f-dea4-43e6-8fc5-97934ecf5300",
+      "expire": 1736358141,
+      "debug": "<FileLocation><FileDigest>EVJP11UROW+Boz/yUfRG7i6XIOo=</FileDigest><Url>http://tlu.dl.delivery.mp.microsoft.com/filestreamingservice/files/fac4041f-dea4-43e6-8fc5-97934ecf5300?P1=1736358141&amp;P2=404&amp;P3=2&amp;P4=fwRsi%2ftU2qJGhNlUMfFAtovAf94zmq9ASiXHjy%2fr2EKIY6S4nhXLF5G68iTCvfQkSOY1kn8C%2bAYq%2fv1TG3CbzQ%3d%3d</Url></FileLocation>"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "version": "W11 24H2",
+  "arch": "arm64",
+  "language": "nb-no",
+  "timestamp": "2025-01-08T17:14:54.346563+00:00",
+  "files": {
+    "Microsoft-Windows-LanguageFeatures-Handwriting-nb-no-Package-arm64.cab": {
+      "sha1": "39e839b09555b44eb92a9e13c8d6ad054d3c7f4f",
+      "sha256": "759d45e27f2f62edf585e869749eb45b430570f85525c399f06d4781c5f56826",
+      "size": "7027677",
+      "url": "http://tlu.dl.delivery.mp.microsoft.com/filestreamingservice/files/bc34413a-0c4c-4f8a-a3cc-8b36e25773d5?P1=1736357202&P2=404&P3=2&P4=noozdySHsrKAWtHaHUP%2fI0vZ%2bvfY11Gb%2bmOGiHurFBab9wkxARZNXaTJe1J2PFPmmOpze7u5z3Hq1bqC3%2bY%2fQw%3d%3d",
+      "uuid": "bc34413a-0c4c-4f8a-a3cc-8b36e25773d5",
+      "expire": 1736357202,
+      "debug": "<FileLocation><FileDigest>Oeg5sJVVtE65Kp4TyNatBU08f08=</FileDigest><Url>http://tlu.dl.delivery.mp.microsoft.com/filestreamingservice/files/bc34413a-0c4c-4f8a-a3cc-8b36e25773d5?P1=1736357202&amp;P2=404&amp;P3=2&amp;P4=noozdySHsrKAWtHaHUP%2fI0vZ%2bvfY11Gb%2bmOGiHurFBab9wkxARZNXaTJe1J2PFPmmOpze7u5z3Hq1bqC3%2bY%2fQw%3d%3d</Url></FileLocation>"
+    }
+  }
+}

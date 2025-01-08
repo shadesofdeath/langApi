@@ -1,0 +1,17 @@
+{
+  "version": "W11 24H2",
+  "arch": "arm64",
+  "language": "he-il",
+  "timestamp": "2025-01-08T17:14:43.350521+00:00",
+  "files": {
+    "Microsoft-Windows-LanguageFeatures-Handwriting-he-il-Package-arm64.cab": {
+      "sha1": "a9bb5cf41fba167c4518b298951978c619dc36b3",
+      "sha256": "340552a0eb73f1bf49f45a75412a064800493310cd112dee8115d0f411ab947c",
+      "size": "4486017",
+      "url": "http://tlu.dl.delivery.mp.microsoft.com/filestreamingservice/files/00beb7c7-c324-458c-9b44-0c837d26ec26?P1=1736357162&P2=404&P3=2&P4=ZXOpB3Nyd7HL433YaU8p4y5Nquv29hJ9QhiBIRRdAmKSTXH6y9L0XX1nGH0x3MYWcRVdLlQ%2bb%2b70DwgyiuDokg%3d%3d",
+      "uuid": "00beb7c7-c324-458c-9b44-0c837d26ec26",
+      "expire": 1736357162,
+      "debug": "<FileLocation><FileDigest>qbtc9B+6FnxFGLKYlRl4xhncNrM=</FileDigest><Url>http://tlu.dl.delivery.mp.microsoft.com/filestreamingservice/files/00beb7c7-c324-458c-9b44-0c837d26ec26?P1=1736357162&amp;P2=404&amp;P3=2&amp;P4=ZXOpB3Nyd7HL433YaU8p4y5Nquv29hJ9QhiBIRRdAmKSTXH6y9L0XX1nGH0x3MYWcRVdLlQ%2bb%2b70DwgyiuDokg%3d%3d</Url></FileLocation>"
+    }
+  }
+}

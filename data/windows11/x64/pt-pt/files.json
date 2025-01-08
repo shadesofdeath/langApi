@@ -1,0 +1,17 @@
+{
+  "version": "W11 24H2",
+  "arch": "x64",
+  "language": "pt-pt",
+  "timestamp": "2025-01-08T17:14:06.722095+00:00",
+  "files": {
+    "Microsoft-Windows-LanguageFeatures-Handwriting-pt-pt-Package-amd64.cab": {
+      "sha1": "1de06f99ca22597eb937b75b01b073c4ca358e9c",
+      "sha256": "92792ee96af76791f78b47920930122d7b85381c475b867dfa2563f3551d171d",
+      "size": "5575155",
+      "url": "http://tlu.dl.delivery.mp.microsoft.com/filestreamingservice/files/b3454236-fae1-407d-a886-917f72b6784c?P1=1736357061&P2=404&P3=2&P4=KCMTwuUPAdohlG2aNbfSIoFdVGVeUbAZM4R17jhbdaoIY%2bwKPI3CcaTZCImBepyAgE2iYLF9zcP71W4ry2D4rw%3d%3d",
+      "uuid": "b3454236-fae1-407d-a886-917f72b6784c",
+      "expire": 1736357061,
+      "debug": "<FileLocation><FileDigest>HeBvmcoiWX65N7dbAbBzxMo1jpw=</FileDigest><Url>http://tlu.dl.delivery.mp.microsoft.com/filestreamingservice/files/b3454236-fae1-407d-a886-917f72b6784c?P1=1736357061&amp;P2=404&amp;P3=2&amp;P4=KCMTwuUPAdohlG2aNbfSIoFdVGVeUbAZM4R17jhbdaoIY%2bwKPI3CcaTZCImBepyAgE2iYLF9zcP71W4ry2D4rw%3d%3d</Url></FileLocation>"
+    }
+  }
+}

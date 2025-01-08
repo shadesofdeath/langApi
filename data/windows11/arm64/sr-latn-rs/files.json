@@ -1,0 +1,17 @@
+{
+  "version": "W11 24H2",
+  "arch": "arm64",
+  "language": "sr-latn-rs",
+  "timestamp": "2025-01-08T17:15:08.995350+00:00",
+  "files": {
+    "Microsoft-Windows-LanguageFeatures-Handwriting-sr-latn-rs-Package-arm64.cab": {
+      "sha1": "be1ddcac0e6f30fb013f7b78b3623f8cff4a58c9",
+      "sha256": "7c184c1aa44246c5b84916d8d987a8a4c93e850e3ba25f811f293565a8ad33e8",
+      "size": "15725195",
+      "url": "http://tlu.dl.delivery.mp.microsoft.com/filestreamingservice/files/931403bc-9d9a-4059-aee5-ddf51757a523?P1=1736357406&P2=404&P3=2&P4=A539dH6RzBT%2b0hqRVeuK6wYkpoZQulGhdOti8phkQVxf2PpqMGrzZq8%2frAEW08Kpq9o3isHozn%2fHSFf%2bwMf34g%3d%3d",
+      "uuid": "931403bc-9d9a-4059-aee5-ddf51757a523",
+      "expire": 1736357406,
+      "debug": "<FileLocation><FileDigest>vh3crA5vMPsBP3t4s2I/jP9KWMk=</FileDigest><Url>http://tlu.dl.delivery.mp.microsoft.com/filestreamingservice/files/931403bc-9d9a-4059-aee5-ddf51757a523?P1=1736357406&amp;P2=404&amp;P3=2&amp;P4=A539dH6RzBT%2b0hqRVeuK6wYkpoZQulGhdOti8phkQVxf2PpqMGrzZq8%2frAEW08Kpq9o3isHozn%2fHSFf%2bwMf34g%3d%3d</Url></FileLocation>"
+    }
+  }
+}

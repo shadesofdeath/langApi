@@ -1,0 +1,17 @@
+{
+  "version": "W11 24H2",
+  "arch": "x64",
+  "language": "sl-si",
+  "timestamp": "2025-01-08T17:14:12.498077+00:00",
+  "files": {
+    "Microsoft-Windows-LanguageFeatures-Handwriting-sl-si-Package-amd64.cab": {
+      "sha1": "cb19d7c5853c7b34ee91e8968d1cbbf096ac4c76",
+      "sha256": "d43b01f70b0dc59cf5569eceab826034cf1c8b2cb3a6ebc2888d183a10c21022",
+      "size": "5178991",
+      "url": "http://tlu.dl.delivery.mp.microsoft.com/filestreamingservice/files/384c7570-071b-4756-8ecc-9a1bda1ad84d?P1=1736357039&P2=404&P3=2&P4=Nfu5BePsTma1bD8tFihglsGlND1Pnh4CnFL8SBXyjyp8gD0Rjmka4GFgSIMkRrbtPtMThZvusK7XQjAhesa5PQ%3d%3d",
+      "uuid": "384c7570-071b-4756-8ecc-9a1bda1ad84d",
+      "expire": 1736357039,
+      "debug": "<FileLocation><FileDigest>yxnXxYU8ezTukeiWjRy78JasTHY=</FileDigest><Url>http://tlu.dl.delivery.mp.microsoft.com/filestreamingservice/files/384c7570-071b-4756-8ecc-9a1bda1ad84d?P1=1736357039&amp;P2=404&amp;P3=2&amp;P4=Nfu5BePsTma1bD8tFihglsGlND1Pnh4CnFL8SBXyjyp8gD0Rjmka4GFgSIMkRrbtPtMThZvusK7XQjAhesa5PQ%3d%3d</Url></FileLocation>"
+    }
+  }
+}
