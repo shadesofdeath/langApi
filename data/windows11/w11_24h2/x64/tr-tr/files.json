@@ -4,34 +4,34 @@
   "updateId": "ad27e52b-9e18-408a-9df2-8688e5273fbf",
   "isWin11": true,
   "language": "tr-tr",
-  "timestamp": "2025-01-13T16:09:53.675021+00:00",
+  "timestamp": "2025-01-13T17:07:29.001200+00:00",
   "files": {
     "Microsoft-Windows-LanguageFeatures-Basic-tr-tr-Package-amd64.cab": {
       "sha1": "438f5daae573c7a84e293ae45ca1c32eb5f8a93f",
       "sha256": "dbe33c6b25cd02db520df6e1035b59e466fb2f6067f2054f98fbfd8afcf2949d",
       "size": "13960464",
-      "url": "http://tlu.dl.delivery.mp.microsoft.com/filestreamingservice/files/6c0dec84-11fe-45b8-bf44-a0f7b47c1131?P1=1736785459&P2=404&P3=2&P4=HT8q%2f5sDruIJ9qz9dnOcUkhcYdAt3%2fpr%2bdUpRz1SZaVLuN%2bpCfvAPsVQeEVWDSjoZoxTdafF7wHFc6k1veWYwA%3d%3d",
+      "url": "http://tlu.dl.delivery.mp.microsoft.com/filestreamingservice/files/6c0dec84-11fe-45b8-bf44-a0f7b47c1131?P1=1736788894&P2=404&P3=2&P4=fWxq8GFmrUYVIA3abbQuDVBNZ%2fOy8zn%2b1qzUnfbZVROOKjGUz58YjFDY%2bYArlvpATL5M8TjeO%2fq0vavka6EnvQ%3d%3d",
       "uuid": "6c0dec84-11fe-45b8-bf44-a0f7b47c1131",
-      "expire": 1736785459,
-      "debug": "<FileLocation><FileDigest>Q49dquVzx6hOKTrkXKHDLrX4qT8=</FileDigest><Url>http://tlu.dl.delivery.mp.microsoft.com/filestreamingservice/files/6c0dec84-11fe-45b8-bf44-a0f7b47c1131?P1=1736785459&amp;P2=404&amp;P3=2&amp;P4=HT8q%2f5sDruIJ9qz9dnOcUkhcYdAt3%2fpr%2bdUpRz1SZaVLuN%2bpCfvAPsVQeEVWDSjoZoxTdafF7wHFc6k1veWYwA%3d%3d</Url></FileLocation>"
+      "expire": 1736788894,
+      "debug": "<FileLocation><FileDigest>Q49dquVzx6hOKTrkXKHDLrX4qT8=</FileDigest><Url>http://tlu.dl.delivery.mp.microsoft.com/filestreamingservice/files/6c0dec84-11fe-45b8-bf44-a0f7b47c1131?P1=1736788894&amp;P2=404&amp;P3=2&amp;P4=fWxq8GFmrUYVIA3abbQuDVBNZ%2fOy8zn%2b1qzUnfbZVROOKjGUz58YjFDY%2bYArlvpATL5M8TjeO%2fq0vavka6EnvQ%3d%3d</Url></FileLocation>"
     },
     "Microsoft-Windows-LanguageFeatures-OCR-tr-tr-Package-amd64.cab": {
       "sha1": "cbd063f27edc4896f6080ba86d7a63633275d810",
       "sha256": "7ab52e923f8d01966db3b4241c3afaaf331b5d667af6c015136fa517a0ee7895",
       "size": "149668",
-      "url": "http://tlu.dl.delivery.mp.microsoft.com/filestreamingservice/files/e7931b3c-513a-4f67-b29f-2d6bd43ad6d7?P1=1736785211&P2=404&P3=2&P4=KsKRNOm3BxuyLJy6CLGNAmtAB8JbWuXRpmBvzKRACSdYyxrs6CdFJiP2HshA2DNl7YNwzvoxbk0b8nspT8g3RQ%3d%3d",
+      "url": "http://tlu.dl.delivery.mp.microsoft.com/filestreamingservice/files/e7931b3c-513a-4f67-b29f-2d6bd43ad6d7?P1=1736788624&P2=404&P3=2&P4=Js9%2fk6s1aRCvWoxD3LZ36GpcHpi%2bwXSbe756gevoRlDDa5XSN0Nxfxc9ARmz%2f1sz8FfAxs5KZuUAbhqwcX7QLA%3d%3d",
       "uuid": "e7931b3c-513a-4f67-b29f-2d6bd43ad6d7",
-      "expire": 1736785211,
-      "debug": "<FileLocation><FileDigest>y9Bj8n7cSJb2CAuobXpjYzJ12BA=</FileDigest><Url>http://tlu.dl.delivery.mp.microsoft.com/filestreamingservice/files/e7931b3c-513a-4f67-b29f-2d6bd43ad6d7?P1=1736785211&amp;P2=404&amp;P3=2&amp;P4=KsKRNOm3BxuyLJy6CLGNAmtAB8JbWuXRpmBvzKRACSdYyxrs6CdFJiP2HshA2DNl7YNwzvoxbk0b8nspT8g3RQ%3d%3d</Url></FileLocation>"
+      "expire": 1736788624,
+      "debug": "<FileLocation><FileDigest>y9Bj8n7cSJb2CAuobXpjYzJ12BA=</FileDigest><Url>http://tlu.dl.delivery.mp.microsoft.com/filestreamingservice/files/e7931b3c-513a-4f67-b29f-2d6bd43ad6d7?P1=1736788624&amp;P2=404&amp;P3=2&amp;P4=Js9%2fk6s1aRCvWoxD3LZ36GpcHpi%2bwXSbe756gevoRlDDa5XSN0Nxfxc9ARmz%2f1sz8FfAxs5KZuUAbhqwcX7QLA%3d%3d</Url></FileLocation>"
     },
     "Microsoft-Windows-LanguageFeatures-TextToSpeech-tr-tr-Package-amd64.cab": {
       "sha1": "1bd99088d5b31edfd9605301cb3321615bc06fd8",
       "sha256": "2bf3ee1f8b700c282eb493b04d67ad4647429ed2a2843c74061066358681b82b",
       "size": "6560570",
-      "url": "http://tlu.dl.delivery.mp.microsoft.com/filestreamingservice/files/3d8233a4-7925-4f01-b577-4a018c1ac94a?P1=1736785331&P2=404&P3=2&P4=aM98ZDPVAQ0jjMf35dH%2b9i40gcKFmjnIMXdpki0kWnnQU%2bS5A1qvbPHAsgtF%2bT1uJn8D5PVqT6CpPSlLOKV%2beQ%3d%3d",
+      "url": "http://tlu.dl.delivery.mp.microsoft.com/filestreamingservice/files/3d8233a4-7925-4f01-b577-4a018c1ac94a?P1=1736788754&P2=404&P3=2&P4=SlgnuW9AixN0yIAAlVCGU%2fZOsn3OzZfsLbilnIjPqWncqON03ZESvTptM0r53EMpWFwc5%2bYVDcVqIffq6YP3Qw%3d%3d",
       "uuid": "3d8233a4-7925-4f01-b577-4a018c1ac94a",
-      "expire": 1736785331,
-      "debug": "<FileLocation><FileDigest>G9mQiNWzHt/ZYFMByzMhYVvAb9g=</FileDigest><Url>http://tlu.dl.delivery.mp.microsoft.com/filestreamingservice/files/3d8233a4-7925-4f01-b577-4a018c1ac94a?P1=1736785331&amp;P2=404&amp;P3=2&amp;P4=aM98ZDPVAQ0jjMf35dH%2b9i40gcKFmjnIMXdpki0kWnnQU%2bS5A1qvbPHAsgtF%2bT1uJn8D5PVqT6CpPSlLOKV%2beQ%3d%3d</Url></FileLocation>"
+      "expire": 1736788754,
+      "debug": "<FileLocation><FileDigest>G9mQiNWzHt/ZYFMByzMhYVvAb9g=</FileDigest><Url>http://tlu.dl.delivery.mp.microsoft.com/filestreamingservice/files/3d8233a4-7925-4f01-b577-4a018c1ac94a?P1=1736788754&amp;P2=404&amp;P3=2&amp;P4=SlgnuW9AixN0yIAAlVCGU%2fZOsn3OzZfsLbilnIjPqWncqON03ZESvTptM0r53EMpWFwc5%2bYVDcVqIffq6YP3Qw%3d%3d</Url></FileLocation>"
     }
   }
 }
